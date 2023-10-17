@@ -1,8 +1,12 @@
+import AvailableBrands from "./AvailableBrands/AvailableBrands.jsx/AvailableBrands";
+import Banner from "./Banner/Banner";
 
 const Home = () => {
     return (
         <div>
-            <h1>Hello from Home</h1>
+            <Banner></Banner>
+            <AvailableBrands></AvailableBrands>
+
         </div>
     );
 };
