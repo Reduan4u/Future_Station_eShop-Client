@@ -3,13 +3,13 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
-    /* const { user, logOut } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     const handleSignOut = () => {
         logOut()
             .then()
             .catch()
-    } */
+    }
 
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
@@ -31,7 +31,10 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-3xl font-bold">Nav_Bar</a>
+                    <div >
+                        {/* <h1>FUTURE <br />STATION</h1> */}
+                        <img className="w-52" src="../../../../public//microlab-logo-043D62D483-seeklogo.com.png" alt="" />
+                    </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -39,7 +42,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                {/* <div className="navbar-end">
+                <div className="navbar-end">
 
 
                     {
@@ -70,7 +73,7 @@ const Navbar = () => {
                                 <button className="btn btn-neutral btn-xs sm:btn-sm md:btn-md lg:btn-lg my-2">Log In</button>
                             </Link>
                     }
-                </div> */}
+                </div>
 
             </div>
         </div>

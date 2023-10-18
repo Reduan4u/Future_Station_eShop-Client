@@ -33,7 +33,9 @@ const AddProducts = () => {
                         title: 'Your work has been saved',
                         showConfirmButton: false,
                         timer: 1500
-                    })
+                    });
+                    form.reset();
+
                 }
             })
     }

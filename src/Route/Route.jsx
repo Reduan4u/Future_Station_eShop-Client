@@ -7,6 +7,9 @@ import Brands from "../Components/Brands/Brands";
 import AddProducts from "../Components/AddProducts/AddProducts";
 import Cart from "../Components/Cart/Cart";
 import AboutUs from "../Components/AboutUs/AboutUs";
+import SignUp from "../Components/SignUp/SignUp";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import AvailableBrands from "../Components/Home/AvailableBrands/AvailableBrands.jsx/AvailableBrands";
 
 const router = createBrowserRouter([
   {
@@ -22,25 +25,35 @@ const router = createBrowserRouter([
       },
       {
         path: '/brands/:brandName',
-        element: <Brands></Brands>,
-        loader: () => fetch("https://future-station-server-efx40cus0-reduanul-haques-projects.vercel.app/product")
+        element: <PrivateRoute><Brands></Brands></PrivateRoute>,
+        loader: () => fetch("https://future-station-server.vercel.app/product")
       },
       {
         path: '/addProducts',
-        element: <AddProducts></AddProducts>
+        element: <PrivateRoute><AddProducts></AddProducts></PrivateRoute>
       },
       {
         path: '/cart',
-        element: <Cart></Cart>
+        element: <PrivateRoute><Cart></Cart></PrivateRoute>
       },
       {
         path: '/aboutUs',
         element: <AboutUs></AboutUs>
       },
       {
-        path: '/login',
+        path: '/brands',
+        element: <AvailableBrands></AvailableBrands>
+      },
+      {
+        path: '/logIn',
         element: <LogIn></LogIn>
       },
+      {
+        path: '/signUp',
+        element: <SignUp></SignUp>
+      },
+
+
     ]
   },
 ]);
