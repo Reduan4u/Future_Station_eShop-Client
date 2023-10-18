@@ -16,11 +16,14 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch("/brands.json")
+
       },
       {
-        path: '/brands',
-        element: <Brands></Brands>
+        path: '/brands/:brandName',
+        element: <Brands></Brands>,
+        loader: () => fetch("https://future-station-server-efx40cus0-reduanul-haques-projects.vercel.app/product")
       },
       {
         path: '/addProducts',

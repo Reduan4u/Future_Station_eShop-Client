@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "brandName": "Apple",
+        "brandImage": "https://i.ibb.co/g36dGyR/apple-logo-E3-DBF3-AE34-seeklogo-com.png "
+    },
+    {
+        "id": 2,
+        "brandName": "Google",
+        "brandImage": "https://cdn.freebiesupply.com/logos/thumbs/2x/google-1-1-logo.png "
+    },
+    {
+        "id": 3,
+        "brandName": "Samsung",
+        "brandImage": "https://i.ibb.co/37vX258/samsung-logo-BBBE39-AD49-seeklogo-com.png"
+    },
+    {
+        "id": 4,
+        "brandName": "Canon",
+        "brandImage": "https://i.ibb.co/18HLf70/canon-logo-BDB2346982-seeklogo-com.png   "
+    },
+    {
+        "id": 5,
+        "brandName": "Intel",
+        "brandImage": "https://i.ibb.co/TctQTy0/intel-logo-3-F88-C332-C8-seeklogo-com.png            "
+    },
+    {
+        "id": 6,
+        "brandName": "Sony",
+        "brandImage": "https://i.ibb.co/RCTd2yC/sony-logo-9-A5581-F3-B3-seeklogo-com.png"
+    }
+]
