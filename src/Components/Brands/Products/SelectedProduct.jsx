@@ -1,7 +1,37 @@
-import React from 'react';
 
 const SelectedProduct = ({ products }) => {
-    const { _id, addedProductName, addedBrandName, addedProductType, addedProductPrice, addedProductRating, addedProductPhoto, addedProductDescription } = products || {};
+    const { addedProductName, addedBrandName, addedProductType, addedProductPrice, addedProductRating, addedProductPhoto, addedProductDescription } = products || {};
+
+    const handleAddToCard = event => {
+        event.preventDefault();
+        console.log(products);
+
+
+
+        //Send data to SERVER
+
+        fetch('https://future-station-server.vercel.app/cartProduct', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(products)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: 'Product Added to Cart Successfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            })
+    }
+
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl">
             <figure><img src={addedProductPhoto} alt="Album" /></figure>
@@ -16,10 +46,9 @@ const SelectedProduct = ({ products }) => {
                 <p>Rating: {addedProductRating}/10 </p>
 
 
-                <div className="card-actions justify-end">
-                    <h2></h2>
+                <form onSubmit={handleAddToCard} className="card-actions justify-end">
                     <button className="btn btn-secondary">Add to Cart</button>
-                </div>
+                </form>
             </div>
         </div>
     );

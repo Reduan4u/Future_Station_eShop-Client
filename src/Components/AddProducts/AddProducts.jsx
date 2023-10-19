@@ -14,9 +14,9 @@ const AddProducts = () => {
         const addedProductDescription = form.productDescription.value;
 
         const newProduct = { addedProductName, addedBrandName, addedProductType, addedProductPrice, addedProductRating, addedProductPhoto, addedProductDescription };
-        console.log(newProduct);
+        //console.log(newProduct);
 
-        fetch('http://localhost:5000/product', {
+        fetch('https://future-station-server.vercel.app/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -35,7 +35,6 @@ const AddProducts = () => {
                         timer: 1500
                     });
                     form.reset();
-
                 }
             })
     }
@@ -77,14 +76,14 @@ const AddProducts = () => {
 
                         </div>
                         <div className="col-span-2">
-                            <label className="text-gray-700 " >Product Description</label>
+                            <label className="text-gray-100 " >Product Description</label>
                             <textarea className="textarea w-full textarea-bordered" name="productDescription" placeholder="Short Description about the Product"></textarea>
 
                         </div>
                     </div>
 
                     <div className="flex justify-center mt-6">
-                        <button className="px-6 py-2 leading-5 text-black font-bold transition-colors bg-yellow-400 duration-200 transform bg-gray-100 rounded-md hover:bg-red-400 focus:outline-none focus:bg-red-4 00 uppercase w-full">Add Product</button>
+                        <button className="px-6 py-2 leading-5 text-black font-bold transition-colors bg-yellow-400 duration-200 transform  rounded-md hover:bg-red-400 focus:outline-none focus:bg-red-4 00 uppercase w-full">Add Product</button>
                     </div>
                 </form>
             </div>

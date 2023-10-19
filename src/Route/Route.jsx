@@ -30,7 +30,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/cart',
-        element: <PrivateRoute><Cart></Cart></PrivateRoute>
+        element: <PrivateRoute><Cart></Cart></PrivateRoute>,
+        loader: () => fetch("https://future-station-server.vercel.app/cartProduct")
       },
       {
         path: '/aboutUs',
@@ -43,17 +44,17 @@ const router = createBrowserRouter([
       {
         path: '/brands/:brandName',
         element: <PrivateRoute><Brands></Brands></PrivateRoute>,
-        loader: () => fetch("https://future-station-server-ad3zufwus-reduanul-haques-projects.vercel.app/product")
+        loader: () => fetch("https://future-station-server.vercel.app/product")
       },
       {
         path: '/:addedBrandName/:addedProductName/:_id',
         element: <PrivateRoute><Products></Products></PrivateRoute>,
-        loader: () => fetch("https://future-station-server-ad3zufwus-reduanul-haques-projects.vercel.app/product")
+        loader: () => fetch("https://future-station-server.vercel.app/product")
       },
       {
         path: '/:addedBrandName/:id/update',
         element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://future-station-server-ad3zufwus-reduanul-haques-projects.vercel.app/product/${params.id}`)
+        loader: ({ params }) => fetch(`https://future-station-server.vercel.app/product/${params.id}`)
       },
       {
         path: '/logIn',

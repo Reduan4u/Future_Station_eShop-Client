@@ -82,7 +82,7 @@ const UpdateProduct = () => {
 
                         </div>
                         <div className="col-span-2">
-                            <label className="text-gray-700 " >Product Description</label>
+                            <label className="text-gray-100 " >Product Description</label>
                             <textarea className="textarea w-full textarea-bordered" defaultValue={addedProductDescription} name="productDescription" placeholder="Short Description about the Product"></textarea>
 
                         </div>
