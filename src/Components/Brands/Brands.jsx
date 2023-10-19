@@ -13,16 +13,20 @@ const Brands = () => {
     }, [brandName, products])
 
 
-
     return (
         <div>
-            <div>
-                <Banner></Banner>
-            </div>
-            <div className="w-10/12 m-auto grid grid-cols-2 my-10">
-                {
-                    brandProducts.map(product => <BrandProducts key={product._id} product={product}></BrandProducts>)
 
+            <div>
+                {brandProducts.length > 0 ?
+                    <div>
+                        <Banner></Banner>
+                        <div className="w-10/12 m-auto grid grid-cols-3 my-10 gap-20">
+                            {brandProducts.map(product => <BrandProducts key={product._id} product={product}></BrandProducts>)}
+                        </div>
+                    </div>
+                    :
+                    (<h1 className="text-5xl col-span-3 my-20 text-center">Product Available Soon...</h1>
+                    )
                 }
             </div>
         </div>

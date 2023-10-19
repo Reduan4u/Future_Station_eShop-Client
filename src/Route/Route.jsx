@@ -10,6 +10,8 @@ import AboutUs from "../Components/AboutUs/AboutUs";
 import SignUp from "../Components/SignUp/SignUp";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AvailableBrands from "../Components/Home/AvailableBrands/AvailableBrands.jsx/AvailableBrands";
+import Products from "../Components/Brands/Products/Products";
+import UpdateProduct from "../Components/UpdateProduct/UpdateProduct/UpdateProduct";
 
 const router = createBrowserRouter([
   {
@@ -21,12 +23,6 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home></Home>,
         loader: () => fetch("/brands.json")
-
-      },
-      {
-        path: '/brands/:brandName',
-        element: <PrivateRoute><Brands></Brands></PrivateRoute>,
-        loader: () => fetch("https://future-station-server.vercel.app/product")
       },
       {
         path: '/addProducts',
@@ -43,6 +39,21 @@ const router = createBrowserRouter([
       {
         path: '/brands',
         element: <AvailableBrands></AvailableBrands>
+      },
+      {
+        path: '/brands/:brandName',
+        element: <PrivateRoute><Brands></Brands></PrivateRoute>,
+        loader: () => fetch("https://future-station-server-ad3zufwus-reduanul-haques-projects.vercel.app/product")
+      },
+      {
+        path: '/:addedBrandName/:addedProductName/:_id',
+        element: <PrivateRoute><Products></Products></PrivateRoute>,
+        loader: () => fetch("https://future-station-server-ad3zufwus-reduanul-haques-projects.vercel.app/product")
+      },
+      {
+        path: '/:addedBrandName/:id/update',
+        element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://future-station-server-ad3zufwus-reduanul-haques-projects.vercel.app/product/${params.id}`)
       },
       {
         path: '/logIn',

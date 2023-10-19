@@ -30,7 +30,7 @@ const AddProducts = () => {
                     Swal.fire({
                         position: 'top-center',
                         icon: 'success',
-                        title: 'Your work has been saved',
+                        title: 'Product Added Successfully',
                         showConfirmButton: false,
                         timer: 1500
                     });
