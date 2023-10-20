@@ -12,7 +12,6 @@ const SelectedProduct = ({ products }) => {
 
 
         //Send data to SERVER
-
         fetch('https://future-station-server.vercel.app/cartProduct', {
             method: 'POST',
             headers: {
@@ -39,14 +38,15 @@ const SelectedProduct = ({ products }) => {
         <div className="card lg:card-side bg-base-100 shadow-xl">
             <figure><img src={addedProductPhoto} alt="Album" /></figure>
             <div className="card-body">
-                <h2 className="card-title">{addedProductName}</h2>
-                <p>A {addedProductType} by <strong>{addedBrandName}</strong></p>
-                <p>About: </p>
-                <p>{addedProductDescription}</p>
+                <h2 className="card-title  text-xl md:text-3xl lg:text-4xl sm:text-2xl ">{addedProductName}</h2>
+                <p className=" text-base sm:text-lg md:text-xl lg:text-2xl  ">A {addedProductType} by <strong>{addedBrandName}</strong></p>
+                <p className=" text-base sm:text-lg md:text-xl lg:text-2xl font-semibold">About: <br /><span className="text-sm sm:text-base md:text-lg lg:text-xl font-thin">{addedProductDescription}</span></p>
 
-                <p>Price: {addedProductPrice} </p>
+                <div className="flex justify-between items-center">
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-left">Price: <strong className="text-pink-500">{addedProductPrice}.00$</strong> </p>
 
-                <p>Rating: {addedProductRating}/10 </p>
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-left">Rating: <strong className="text-yellow-400">{addedProductRating}/10</strong> </p>
+                </div>
 
 
                 <form onSubmit={handleAddToCard} className="card-actions justify-end">

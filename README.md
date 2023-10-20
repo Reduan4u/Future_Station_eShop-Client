@@ -1,7 +1,7 @@
 # Future Station
 
-Client Site Link:
-- [https://future-station.web.app/]
+Client Site Link: [https://future-station.web.app/]
+ 
 
 About This Project:
 - User will get separate products of different Brands in a place.

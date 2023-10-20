@@ -6,12 +6,13 @@ import LogIn from "../Components/LogIn/LogIn";
 import Brands from "../Components/Brands/Brands";
 import AddProducts from "../Components/AddProducts/AddProducts";
 import Cart from "../Components/Cart/Cart";
-import AboutUs from "../Components/AboutUs/AboutUs";
+import AboutUs from "../Components/Contact/Contact";
 import SignUp from "../Components/SignUp/SignUp";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AvailableBrands from "../Components/Home/AvailableBrands/AvailableBrands.jsx/AvailableBrands";
 import Products from "../Components/Brands/Products/Products";
 import UpdateProduct from "../Components/UpdateProduct/UpdateProduct/UpdateProduct";
+import Contact from "../Components/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -34,8 +35,8 @@ const router = createBrowserRouter([
         loader: () => fetch("https://future-station-server.vercel.app/cartProduct")
       },
       {
-        path: '/aboutUs',
-        element: <AboutUs></AboutUs>
+        path: '/contact',
+        element: <Contact></Contact>
       },
       {
         path: '/brands',

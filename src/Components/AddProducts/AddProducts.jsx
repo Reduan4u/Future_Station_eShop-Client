@@ -83,7 +83,7 @@ const AddProducts = () => {
                     </div>
 
                     <div className="flex justify-center mt-6">
-                        <button className="px-6 py-2 leading-5 text-black font-bold transition-colors bg-yellow-400 duration-200 transform  rounded-md hover:bg-red-400 focus:outline-none focus:bg-red-4 00 uppercase w-full">Add Product</button>
+                        <button className="px-6 py-2 leading-5 text-black font-bold transition-colors bg-green-400 duration-200 transform  rounded-md hover:bg-pink-400 focus:outline-none focus:bg-red-4 00 uppercase w-full">Add Product</button>
                     </div>
                 </form>
             </div>

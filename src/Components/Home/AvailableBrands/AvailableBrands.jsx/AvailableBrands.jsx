@@ -13,15 +13,15 @@ const AvailableBrands = () => {
 
     return (
         <div className="w-10/12 m-auto mb-20">
-            <h1 className="py-4 border-b-2 border-gray-400 text-4xl ">Our Trusted Brands</h1>
+            <h1 className="py-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold ">Our Trusted Brands</h1>
             <div>
 
                 <Marquee pauseOnHover={true}>
-                    <section className="bg-white border-b-2 border-gray-400 ">
+                    <section className="bg-white border-y-2 border-gray-400 ">
                         <div className="container mx-auto">
-                            <div className="flex flex-wrap -mx-4 ">
+                            <div className="flex -mx-4 ">
                                 <div className="w-full px-4">
-                                    <div className="flex flex-wrap items-center justify-center">
+                                    <div className="flex items-center justify-center">
                                         <a
                                             href="javascript:void(0)"
                                             className="mx-4 flex w-[150px] items-center justify-center py-5 2xl:w-[180px]"
