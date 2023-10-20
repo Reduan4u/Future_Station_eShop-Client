@@ -1,21 +1,25 @@
 import { useEffect, useState } from "react";
 import CartShow from "./CartShow";
+import { useLoaderData } from "react-router-dom";
 
 const Cart = () => {
-    const [cartProducts, setCartProducts] = useState([]);
+    const loadedProducts = useLoaderData();
+    const [cartProducts, setCartProducts] = useState(loadedProducts);
 
-    useEffect(() => {
-        fetch('https://future-station-server.vercel.app/cartProduct')
-            .then(res => res.json())
-            .then(data => setCartProducts(data))
-    }, [])
+
 
     return (
         <div className="w-1/2 m-auto my-10">
             <div className="flex flex-col max-w-3xl p-6 space-y-4 sm:p-10 dark:bg-gray-900 dark:text-gray-100">
                 <h2 className="text-5xl text-center  font-semibold">Your cart</h2>
                 {
-                    cartProducts.map(cartProduct => <CartShow key={cartProduct._id} cartProduct={cartProduct} ></CartShow>)
+                    cartProducts.map(cartProduct => <CartShow
+                        key={cartProduct._id}
+                        cartProduct={cartProduct}
+                        cartProducts={cartProducts}
+                        setCartProducts={setCartProducts}
+
+                    ></CartShow>)
                 }
                 <div className="space-y-1 text-right">
                     <p>Total amount:

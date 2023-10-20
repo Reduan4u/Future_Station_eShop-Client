@@ -1,6 +1,9 @@
+import Swal from "sweetalert2";
 
 const SelectedProduct = ({ products }) => {
     const { addedProductName, addedBrandName, addedProductType, addedProductPrice, addedProductRating, addedProductPhoto, addedProductDescription } = products || {};
+    const selectedProduct = { addedProductName, addedBrandName, addedProductType, addedProductPrice, addedProductRating, addedProductPhoto, addedProductDescription }
+    console.log(selectedProduct);
 
     const handleAddToCard = event => {
         event.preventDefault();
@@ -15,7 +18,7 @@ const SelectedProduct = ({ products }) => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(products)
+            body: JSON.stringify(selectedProduct)
         })
             .then(res => res.json())
             .then(data => {

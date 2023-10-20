@@ -1,8 +1,8 @@
 import Swal from "sweetalert2";
 
-const CartShow = ({ cartProduct }) => {
+const CartShow = ({ cartProduct, setCartProducts, cartProducts }) => {
 
-    const { _id, addedProductName, addedBrandName, addedProductType, addedProductPrice, addedProductRating, addedProductPhoto, addedProductDescription } = cartProduct || {};
+    const { _id, addedProductName, addedProductType, addedProductPrice, addedProductPhoto } = cartProduct || {};
 
     const handleRemove = _id => {
         console.log(_id);
@@ -26,9 +26,11 @@ const CartShow = ({ cartProduct }) => {
                             console.log("deleted");
                             Swal.fire(
                                 'Deleted!',
-                                'Your file has been deleted.',
+                                'Your product has been deleted.',
                                 'success'
                             )
+                            const remaining = cartProducts.filter(product => product._id !== _id);
+                            setCartProducts(remaining);
                         }
                     })
             }
