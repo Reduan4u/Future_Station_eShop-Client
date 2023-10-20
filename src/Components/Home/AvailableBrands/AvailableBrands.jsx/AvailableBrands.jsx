@@ -13,7 +13,7 @@ const AvailableBrands = () => {
 
     return (
         <div className="w-10/12 m-auto mb-20">
-            <h1 className="py-4 border-b-2 border-gray-400 text-4xl ">Our Brands</h1>
+            <h1 className="py-4 border-b-2 border-gray-400 text-4xl ">Our Trusted Brands</h1>
             <div>
 
                 <Marquee pauseOnHover={true}>

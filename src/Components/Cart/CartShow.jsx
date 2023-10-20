@@ -16,12 +16,21 @@ const CartShow = ({ cartProduct }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                /* Swal.fire(
-                    'Deleted!',
-                    'Your file has been deleted.',
-                    'success'
-                ) */
-                console.log("deleted");
+                fetch(`https://future-station-server.vercel.app/cartProduct/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            console.log("deleted");
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                        }
+                    })
             }
         })
     }

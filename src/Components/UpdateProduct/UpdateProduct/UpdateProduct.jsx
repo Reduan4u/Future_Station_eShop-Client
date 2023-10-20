@@ -20,7 +20,7 @@ const UpdateProduct = () => {
         const updatedProduct = { addedProductName, addedBrandName, addedProductType, addedProductPrice, addedProductRating, addedProductPhoto, addedProductDescription };
         console.log(updatedProduct);
 
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://future-station-server.vercel.app/cartProduct/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

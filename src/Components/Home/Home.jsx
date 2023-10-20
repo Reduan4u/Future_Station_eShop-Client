@@ -1,14 +1,14 @@
-import { useLoaderData } from "react-router-dom";
 import AvailableBrands from "./AvailableBrands/AvailableBrands.jsx/AvailableBrands";
 import Banner from "./Banner/Banner";
+import Discount from "./Discount/Discount";
 
 const Home = () => {
-    const brand = useLoaderData();
 
     return (
         <div>
             <Banner></Banner>
             <AvailableBrands></AvailableBrands>
+            <Discount></Discount>
 
         </div>
     );
