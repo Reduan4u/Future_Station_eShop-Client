@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import BrandProducts from "./BrandProducts";
 import ProductBanner from "./ProductBanner";
 
@@ -25,7 +25,12 @@ const Brands = () => {
                         </div>
                     </div>
                     :
-                    (<h1 className="text-5xl col-span-3 my-20 text-center">Product Available Soon...</h1>
+                    (<div className="my-20">
+                        <h1 className="text-5xl col-span-3  mb-10 text-center">Product Available Soon...</h1>
+                        <Link to="/brands">
+                            <a rel="noopener noreferrer" href="#" className="px-8 btn flex w-1/5 m-auto py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Shop More</a></Link>
+                    </div>
+
                     )
                 }
             </div>

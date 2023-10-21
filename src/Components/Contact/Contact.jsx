@@ -3,11 +3,11 @@ const Contact = () => {
     return (
         <div>
 
-            <div className="grid grid-cols-1 gap-8 px-8 py-16 mx-auto md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 dark:bg-gray-800 dark:text-gray-100">
+            <div className="grid grid-cols-1 gap-8 px-8 py-16 mx-auto md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 bg-base-200  ">
                 <div className="flex flex-col justify-between">
                     <div className="py-6 md:py-0 md:px-6 flex flex-col justify-center items-center text-">
                         <h1 className="text-4xl font-bold">Get in touch</h1>
-                        <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
+                        <p className="pt-2 pb-4">Fill in the form to start a</p>
                         <div className="space-y-4">
                             <p className="flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
@@ -35,17 +35,17 @@ const Contact = () => {
                 <form noValidate="" className="space-y-6">
                     <div>
                         <label className="text-sm">Full name</label>
-                        <input id="name" type="text" placeholder="" className="w-full p-3 rounded dark:bg-gray-800" />
+                        <input id="name" type="text" placeholder="Your Name" className="w-full p-3 input input-bordered  rounded " />
                     </div>
                     <div>
                         <label className="text-sm">Email</label>
-                        <input id="email" type="email" className="w-full p-3 rounded dark:bg-gray-800" />
+                        <input id="email" type="email" placeholder="Your Email" className="w-full p-3 rounded input input-bordered " />
                     </div>
                     <div>
                         <label className="text-sm">Message</label>
-                        <textarea id="message" rows="3" className="w-full p-3 rounded dark:bg-gray-800"></textarea>
+                        <textarea id="message" rows="3" placeholder="Your Message" className="w-full h-40 p-3 rounded input input-bordered"></textarea>
                     </div>
-                    <button type="submit" className="w-full p-3 text-sm font-bold tracki uppercase rounded dark:bg-violet-400 dark:text-gray-900">Send Message</button>
+                    <button type="submit" className="w-full p-3 text-sm font-bold tracki uppercase btn-outline btn rounded btn-info">Send Message</button>
                 </form>
             </div>
 

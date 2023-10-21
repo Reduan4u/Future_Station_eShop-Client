@@ -7,7 +7,7 @@ const Products = () => {
     const [products, setProducts] = useState();
     const { _id } = useParams();
     const allProducts = useLoaderData();
-    console.log(products);
+    //console.log(products);
 
     useEffect(() => {
         const selectedProduct = allProducts.find(products => products._id == _id);

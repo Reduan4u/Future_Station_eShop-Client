@@ -42,42 +42,41 @@ const AddProducts = () => {
     return (
         <div>
 
-            <div className="max-w-4xl p-6 mx-auto bg-blue-950 bg-opacity-85 rounded-md shadow-md  mt-20 mb-20">
-                <h2 className=" font-semibold capitalize text-center text-4xl mb-10 text-white">ADD PRODUCTS</h2>
+            <div className="max-w-4xl p-6 mx-auto bg-base-300 rounded-md shadow-md  mt-20 mb-20">
+                <h2 className=" font-semibold capitalize text-center text-4xl mb-10">ADD PRODUCTS</h2>
 
                 <form onSubmit={handleAddProduct}>
-                    <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2  ">
-                        <div>
-                            <label className="text-gray-100">Product Name</label>
+                    <div className="  ">
+                        <div className="">
+                            <label className=" font-bold">Product Name</label>
                             <input id="drop" name="productName" placeholder=" Name" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md  focus:border-blue-500  focus:outline-none focus:ring" />
                         </div>
-                        <div>
-                            <label className=" text-gray-100 " >Brand Name</label>
+                        <div className="">
+                            <label className="  font-bold " >Brand Name</label>
                             <input id="" type="text" name="brandName" placeholder=" Brand" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md    focus:border-blue-500  focus:outline-none focus:ring" />
                         </div>
-
                         <div>
-                            <label className="text-gray-100 " >Product Type</label>
+                            <label className=" font-bold " >Product Type</label>
                             <input id="" type="text" placeholder=" Type" name="productType" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring" />
                         </div>
 
                         <div>
-                            <label className="text-gray-100 " >Product Price</label>
+                            <label className=" font-bold " >Product Price</label>
                             <input id="" type="number" name="productPrice" placeholder="Price" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md  focus:border-blue-500 focus:outline-none focus:ring" />
                         </div>
                         <div>
-                            <label className="text-gray-100 " >Product Rating</label>
+                            <label className=" font-bold " >Product Rating</label>
                             <input id="" type="number" name="productRating" placeholder="Rating" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md  focus:border-blue-500 focus:outline-none focus:ring" />
                         </div>
 
                         <div>
-                            <label className="text-gray-100 " >Product Photo</label>
-                            <input id="passwordConfirmation" type="text" name="productPhoto" placeholder="Photo URL" className="w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md  focus:border-blue-500 focus:outline-none focus:ring" />
+                            <label className=" font-bold " >Product Photo</label>
+                            <input id="" type="text" name="productPhoto" placeholder="Photo URL" className="w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md  focus:border-blue-500 focus:outline-none focus:ring" />
 
                         </div>
                         <div className="col-span-2">
-                            <label className="text-gray-100 " >Product Description</label>
-                            <textarea className="textarea w-full textarea-bordered" name="productDescription" placeholder="Short Description about the Product"></textarea>
+                            <label className=" font-bold " >Product Description</label>
+                            <textarea className="h-40 block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md  focus:border-blue-500 focus:outline-none focus:ring" name="productDescription" placeholder="Short Description about the Product"></textarea>
 
                         </div>
                     </div>

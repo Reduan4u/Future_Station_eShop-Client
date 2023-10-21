@@ -39,7 +39,7 @@ const CartShow = ({ cartProduct, setCartProducts, cartProducts }) => {
 
     return (
         <div>
-            <ul className="flex flex-col divide-y di  divide-gray-700">
+            <ul className="flex flex-col divide-y di  divide-gray-700 border-b-2 border-gray-300 p-4 rounded-md">
                 <li className="flex flex-col py-6 sm:flex-row sm:justify-between">
                     <div className="flex  justify-center items-center w-full space-x-2 sm:space-x-4">
                         <img className="flex-shrink-0 object-cover w-20 h-20 dark:border-transparent rounded outline-none sm:w-32 sm:h-32 dark:bg-gray-500" src={addedProductPhoto} alt="Polaroid camera" />

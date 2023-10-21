@@ -34,7 +34,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className=" ">
+        <div className="bg-gray-800 text-gray-100 ">
             <div className="navbar max-w-6xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -79,12 +79,12 @@ const Navbar = () => {
                                     }
                                     <p className="text-xs sm:text-sm md:text-base lg:text-lg text-center">{user.displayName}</p>
                                 </div>
-                                <button onClick={handleSignOut} className="ml-1 btn btn-neutral btn-xs sm:btn-sm md:btn-md lg:btn-lg my-2">Sign Out</button>
+                                <button onClick={handleSignOut} className="ml-1 btn btn-info btn-outline btn-xs sm:btn-sm md:btn-md lg:btn-lg my-2">Sign Out</button>
                             </div>
 
                             :
                             <Link to="/login">
-                                <button className="btn btn-neutral btn-xs sm:btn-sm md:btn-md lg:btn-lg my-2">Log In</button>
+                                <button className="btn btn-info btn-outline btn-xs sm:btn-sm md:btn-md lg:btn-lg my-2">Log In</button>
                             </Link>
                     }
                     <div className="">

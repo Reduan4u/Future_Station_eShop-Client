@@ -1,13 +1,18 @@
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const SelectedProduct = ({ products }) => {
+    const { user } = useContext(AuthContext);
+    const email = user.email;
+
     const { addedProductName, addedBrandName, addedProductType, addedProductPrice, addedProductRating, addedProductPhoto, addedProductDescription } = products || {};
-    const selectedProduct = { addedProductName, addedBrandName, addedProductType, addedProductPrice, addedProductRating, addedProductPhoto, addedProductDescription }
-    console.log(selectedProduct);
+    const selectedProduct = { email, addedProductName, addedBrandName, addedProductType, addedProductPrice, addedProductRating, addedProductPhoto, addedProductDescription }
+    //console.log(selectedProduct);
 
     const handleAddToCard = event => {
         event.preventDefault();
-        console.log(products);
+        //console.log(products);
 
 
 
